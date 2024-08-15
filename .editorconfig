@@ -1,0 +1,58 @@
+# Top-most EditorConfig file
+root = true
+
+# Windows-style newlines with a newline ending every file
+[*]
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# 4 space indentation
+[*.{cs,xaml}]
+indent_style = space
+indent_size = 4
+
+# 2 space indentation
+[*.{rb,wxs,wxi,json,js}]
+indent_style = space
+indent_size = 2
+
+[*.DotSettings]
+insert_final_newline = false
+indent_size = 2
+
+[*.{csproj,sln,props,wixproj}]
+insert_final_newline = false
+indent_style = space
+indent_size = 2
+
+[*]
+
+# IDE0008: Use explicit type
+csharp_style_var_when_type_is_apparent = true
+csharp_style_var_for_built_in_types = true
+csharp_style_var_elsewhere = true
+
+# IDE0022: Use block body for methods
+csharp_style_expression_bodied_methods = when_on_single_line:silent
+
+# IDE0047: Remove unnecessary parentheses
+dotnet_diagnostic.IDE0047.severity = none
+
+# IDE0061: Use block body for local functions
+csharp_style_expression_bodied_local_functions = when_on_single_line:silent
+
+# IDE0160: Convert to block scoped namespace
+csharp_style_namespace_declarations = file_scoped:warning
+dotnet_diagnostic.IDE0160.severity = warning
+dotnet_diagnostic.IDE0161.severity = warning
+
+csharp_indent_case_contents = true
+csharp_indent_case_contents_when_block = false
+
+[*.cs]
+
+dotnet_style_qualification_for_event = false:warning
+dotnet_style_qualification_for_field = false:warning
+dotnet_style_qualification_for_method = false:warning
+dotnet_style_qualification_for_property = false:warning
